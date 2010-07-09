@@ -32,6 +32,4 @@ Story
 </div>
 
 </body>
-
-
 </html>

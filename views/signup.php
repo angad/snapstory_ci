@@ -16,6 +16,7 @@
 <body>
 
 <div id = "top">
+
 	<?php echo validation_errors(); ?>
 	Create New User
 	<?php echo form_open("user/submit"); ?><br/>

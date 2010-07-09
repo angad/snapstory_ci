@@ -29,18 +29,22 @@ function login()
 
 function new_theme()
 {
-	$theme_name = $this->input->post('name');
+	$theme_name = $this->input->post('theme_name');
 	$date_start = $this->input->post('date_start');
 	$date_end = $this->input->post('date_end');
 	$theme_desc = $this->input->post('theme_desc');
 	$theme_pic = $this->input->post('theme_pic');
+
+	$this->load->helper('url');
+	$theme_link = url_title($theme_name, 'underscore', TRUE);
 
 	$data = array(
 	'name'=>$theme_name,
 	'date_start'=>$date_start,
 	'date_end'=>$date_end,
 	'theme_desc'=>$theme_desc,
-	'theme_pic'=>$theme_pic
+	'theme_pic'=>$theme_pic,
+	'theme_link'=>$theme_link
 	);
 	$this->load->model('root');
 	$this->root->load_db();
